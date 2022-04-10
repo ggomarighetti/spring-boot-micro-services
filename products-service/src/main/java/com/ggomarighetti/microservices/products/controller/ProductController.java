@@ -3,10 +3,8 @@ package com.ggomarighetti.microservices.products.controller;
 import com.ggomarighetti.microservices.products.entity.ProductEntity;
 import com.ggomarighetti.microservices.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 import java.util.Random;
@@ -38,5 +36,23 @@ public class ProductController {
         }
 
         return productService.findById(id);
+    }
+
+    @PostMapping("/")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductEntity save(@RequestBody ProductEntity productEntity) {
+        return productService.save(productEntity);
+    }
+
+    @PutMapping("/{id}")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ProductEntity update(@RequestBody ProductEntity productEntity) {
+        return productService.update(productEntity);
+    }
+
+    @DeleteMapping("/{id}")
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    public void deleteById(@PathVariable String id) {
+        productService.deleteById(id);
     }
 }
