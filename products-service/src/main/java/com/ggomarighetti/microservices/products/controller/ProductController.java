@@ -9,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
+import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 @RestController
 @RequestMapping("/")
@@ -23,7 +25,18 @@ public class ProductController {
     }
 
     @GetMapping("/{id}")
-    public ProductEntity findById(@PathVariable String id) {
+    public ProductEntity findById(@PathVariable String id) throws InterruptedException {
+
+        Integer random = new Random().nextInt(3);
+
+        switch (random) {
+            case 1:
+                throw new IllegalStateException("Product not found");
+
+            case 2:
+                TimeUnit.SECONDS.sleep(10L);
+        }
+
         return productService.findById(id);
     }
 }
