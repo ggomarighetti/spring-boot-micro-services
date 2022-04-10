@@ -1,6 +1,6 @@
 package com.ggomarighetti.microservices.products.service;
 
-import com.ggomarighetti.microservices.products.entity.ProductEntity;
+import com.ggomarighetti.microservices.commons.entity.ProductEntity;
 import com.ggomarighetti.microservices.products.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

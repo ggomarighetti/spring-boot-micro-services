@@ -1,7 +1,7 @@
 package com.ggomarighetti.microservices.items.service;
 
 import com.ggomarighetti.microservices.items.client.ProductClient;
-import com.ggomarighetti.microservices.items.entity.ItemEntity;
+import com.ggomarighetti.microservices.commons.entity.ItemEntity;
 import org.hibernate.cache.spi.support.AbstractReadWriteAccess;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

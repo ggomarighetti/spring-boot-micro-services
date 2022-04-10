@@ -1,6 +1,6 @@
 package com.ggomarighetti.microservices.products.controller;
 
-import com.ggomarighetti.microservices.products.entity.ProductEntity;
+import com.ggomarighetti.microservices.commons.entity.ProductEntity;
 import com.ggomarighetti.microservices.products.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

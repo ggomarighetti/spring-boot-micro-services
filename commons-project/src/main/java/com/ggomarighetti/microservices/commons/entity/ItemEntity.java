@@ -1,4 +1,4 @@
-package com.ggomarighetti.microservices.items.entity;
+package com.ggomarighetti.microservices.commons.entity;
 
 import lombok.*;
 

@@ -1,4 +1,4 @@
-package com.ggomarighetti.microservices.products.entity;
+package com.ggomarighetti.microservices.commons.entity;
 
 import lombok.*;
 import org.hibernate.annotations.*;

@@ -1,7 +1,7 @@
 package com.ggomarighetti.microservices.items.controller;
 
-import com.ggomarighetti.microservices.items.entity.ItemEntity;
-import com.ggomarighetti.microservices.items.entity.ProductEntity;
+import com.ggomarighetti.microservices.commons.entity.ItemEntity;
+import com.ggomarighetti.microservices.commons.entity.ProductEntity;
 import com.ggomarighetti.microservices.items.service.ItemService;
 import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
 import io.github.resilience4j.timelimiter.annotation.TimeLimiter;

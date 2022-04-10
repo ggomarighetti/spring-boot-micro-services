@@ -1,6 +1,6 @@
 package com.ggomarighetti.microservices.products.service;
 
-import com.ggomarighetti.microservices.products.entity.ProductEntity;
+import com.ggomarighetti.microservices.commons.entity.ProductEntity;
 
 import java.util.List;
 
