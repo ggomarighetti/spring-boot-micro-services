@@ -2,8 +2,7 @@ package com.ggomarighetti.microservices.items.client;
 
 import com.ggomarighetti.microservices.items.entity.ProductEntity;
 import org.springframework.cloud.openfeign.FeignClient;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -15,4 +14,13 @@ public interface ProductClient {
 
     @GetMapping("/{id}")
     public ProductEntity findById(@PathVariable String id);
+
+    @PostMapping("/")
+    public ProductEntity save(@RequestBody ProductEntity productEntity);
+
+    @PutMapping("/")
+    public ProductEntity update(@RequestBody ProductEntity productEntity);
+
+    @DeleteMapping("/")
+    public void deleteById(@PathVariable String id);
 }
