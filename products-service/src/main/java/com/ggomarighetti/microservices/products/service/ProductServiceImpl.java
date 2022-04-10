@@ -25,4 +25,28 @@ public class ProductServiceImpl implements ProductService {
     public ProductEntity findById(String id) {
         return productRepository.findById(id).orElse(null);
     }
+
+    @Override
+    public ProductEntity save(ProductEntity productEntity) {
+        return productRepository.save(productEntity);
+    }
+
+    @Override
+    public ProductEntity update(ProductEntity productEntity) {
+
+        ProductEntity entity = productRepository.findById(productEntity.getId()).orElse(null);
+
+        if (entity != null) {
+            entity.setName(productEntity.getName());
+            entity.setPrice(productEntity.getPrice());
+            entity = productRepository.save(entity);
+        }
+
+        return entity;
+    }
+
+    @Override
+    public void deleteById(String id) {
+        productRepository.deleteById(id);
+    }
 }
